@@ -11,7 +11,7 @@ $( document ).ready(function() {
     $("#nav-seg").html(data);
   });
   $.get("http://localhost/template-ocupacao-bandejao/pusp/terca.html", function(data) {
-    $("#nav-ter-").html(data);
+    $("#nav-ter").html(data);
   });
   $.get("http://localhost/template-ocupacao-bandejao/pusp/quarta.html", function(data) {
     $("#nav-qua").html(data);
