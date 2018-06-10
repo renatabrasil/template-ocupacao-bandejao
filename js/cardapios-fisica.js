@@ -29,7 +29,7 @@ $( document ).ready(function() {
     $("#nav-dom").html(data);
   });
 
-  loadData(3,0)
+  loadData(2,0)
 
 });
 
