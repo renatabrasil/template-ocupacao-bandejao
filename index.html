@@ -272,47 +272,56 @@
 
 
       moment.updateLocale('pt-br', null);
+
+      var opacidade = 0.9;
+
+      var vazio = 'rgb(50, 117, 188, ' + opacidade +')';
+      var moderado = 'rgb(66, 244, 155, '+ opacidade +')';
+      var movimentado = 'rgb(232, 247, 19, '+ opacidade +')';
+      var lotado = 'rgb(247, 13, 9, '+ opacidade +')';
+
+
       var ctx = document.getElementById("myChart").getContext('2d');
       var myChart = new Chart(ctx, {
-          type: 'line',
+          type: 'bar',
           data: {
+            label: ['Votes', 'askda'],
               // labels: ["11:15", "11:30", "11:45", "12:15", "12:30", "12:45", "13:15", "13:30", "13:45", "14:15"],
               datasets: [{
-                  label: '% Lotação',
+                  // label: 'Vazio',
+
                   borderColor: 'rgb(11,130,151)',
-                  backgroundColor: 'rgb(11,130,151, 0.2)',
-                  // backgroundColor: 'rgb(255,255,255)',
-                  // fillOpacity: .3;
                   fill: true,
                   // borderDash: [10],
                   data: [
+
                     {
                       x: moment("11:15:00", "HH:mm:ss"),
-                      y: 30
+                      y: 20
                     },
                     {
                       x: moment("11:30:00", "HH:mm:ss"),
-                      y: 55
+                      y: 35
                     },
                     {
                       x: moment("11:45:00", "HH:mm:ss"),
-                      y: 60
+                      y: 45
                     },
                     {
                       x: moment("12:00:00", "HH:mm:ss"),
-                      y: 85
+                      y: 65
                     },
                     {
                       x: moment("12:15:00", "HH:mm:ss"),
-                      y: 88
+                      y: 70
                     },
                     {
                       x: moment("12:30:00", "HH:mm:ss"),
-                      y: 75
+                      y: 85
                     },
                     {
                       x: moment("12:45:00", "HH:mm:ss"),
-                      y: 54
+                      y: 88
                     },
                     {
                       x: moment("13:00:00", "HH:mm:ss"),
@@ -340,9 +349,40 @@
                     },
 
                   ],
+                  backgroundColor: [
+                    // vazio: 'rgb(50, 117, 188)'
+                    vazio,
+                    // moderado rgb(66, 244, 155),
+                    moderado,
+                    moderado,
+                    // movimentado rgb(232, 247, 19)
+                    movimentado,
+                    movimentado,
+
+                    // cheio rgb(247, 13, 9)
+                    lotado,
+                    lotado,
+                    //
+                    moderado,
+                    vazio,
+                    vazio,
+                    vazio,
+                    vazio,
+                    vazio,
+                    vazio,
+                  ],
+                  label: [
+                    'Vazio',
+                    'Moderado',
+                    'Movimentado',
+                    'Lotado'
+                  ],
                     // 30, 55, 60, 85, 88, 75, 54, 40, 35, 20, 6, 5, 2, 1, 10],
                   borderWidth: 1
-              }]
+              },
+
+
+            ]
           },
           options: {
             // showAllTooltips: true,
@@ -354,7 +394,7 @@
                       type: 'linear',
                       scaleLabel: {
                         display: true,
-                        labelString: "%"
+                        labelString: "% Lotação"
                       },
                       ticks: {
                           beginAtZero:true,
