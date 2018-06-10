@@ -19,6 +19,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/cardapios.css" rel="stylesheet">
 
 </head>
 
@@ -31,13 +32,11 @@
           <button class="navbar-toggler" type="button" data-target="#menu-toggle" id="menu-toggle" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-
-
         </a>
-        <h5>Central</h5>
+        <div class="float-sm-left">Central</div>
         <div>
           <!-- <span class="oi oi-vertical-align-bottom"></span> -->
-          
+
           <i class="fas fa-dollar-sign fa-lg"></i>&nbsp;
           <i class="fas fa-info-circle fa-lg"></i>
 
@@ -48,10 +47,11 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a href="#">
+                    <a href="#" >
                         Restaurantes
                     </a>
                 </li>
+                <li class="active">Cidade Universitária</li>
                 <li>
                     <a href="#">Central</a>
                 </li>
@@ -64,8 +64,16 @@
                 <li>
                     <a href="#">Químicas</a>
                 </li>
-                <li class="active">
-                    <a href="#">Análise de dados <i class="fas fa-chart-line"></i></a>
+                <li class="active">Quadrilátero Saúde</li>
+                <li>
+                    <a href="#">Escola de Enfermagem</a>
+                </li>
+                <li>
+                    <a href="#">Fac. Sáude Pública</a>
+                </li>
+                <li class="active">USP Leste</li>
+                <li>
+                    <a href="#">EACH</a>
                 </li>
             </ul>
         </div>
@@ -88,9 +96,9 @@
               <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="nav-seg" role="tabpanel" aria-labelledby="nav-seg-tab">
                   <br/>
-                  <p style="text-align: center;">Segunda-feira, 4 de Junho de 2018</p>
+                  <p style="text-align: center; font-size: 0.9em;">Segunda-feira, 4 de Junho de 2018</p>
 
-                  <table class="table table-borderless">
+                  <table class="table table-borderless cardapio">
                     <!-- On rows -->
                     <tr class="table-active">
                       <th><span class="oi oi-sun"></span> ALMOÇO</th>
@@ -119,19 +127,18 @@
                     <tr class="table-sm">
                       <td>Minipão/refresco</td>
                     </tr>
-                    <tr class="table-secondary">
+                    <tr class="footer">
                       <td>Valor calórico para uma refeição: 900 Kcal</td>
                     </tr>
                   </table>
 
                   <div>
                     <canvas id="myChart" width="400" height="400"></canvas>
-                    <p></p>
+                    <p>>informacoes</p>
                   </div>
 
-                  <br/>
 
-                  <table class="table table-borderless">
+                  <table class="table table-borderless cardapio">
                     <!-- On rows -->
                     <tr class="table-active">
                       <th><span class="oi oi-moon"></span> JANTAR</th>
@@ -160,125 +167,30 @@
                     <tr class="table-sm">
                       <td>Minipão/refresco</td>
                     </tr>
-                    <tr class="table-secondary">
+                    <tr class="footer">
                       <td>Valor calórico para uma refeição: 1010 Kcal</td>
                     </tr>
                   </table>
 
                   <br/>
 
-                  <table class="table table-borderless">
+                  <table class="table table-borderless cardapio">
                     <!-- On rows -->
                     <tr class="table-active">
                       <th>Observação</th>
                     </tr>
 
-                    <tr class="table-secondary table-sm">
+                    <tr class="footer table-sm">
                       <td>Cardápio sujeito a modificação</td>
                     </tr>
                   </table>
 
                 </div>
+                <br/>
 
 
 
-                <div class="tab-pane fade" id="nav-ter" role="tabpanel" aria-labelledby="nav-ter-tab">
-                  <br/>
-                  <p style="text-align: center;">Terça-feira, 5 de Junho de 2018</p>
 
-                  <div>
-                    <p><strong>Gráfico dinâmico</strong></p>
-                    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-                    <p></p>
-                  </div>
-
-                  <table class="table table-borderless">
-                    <!-- On rows -->
-                    <tr class="table-active">
-                      <th><span class="oi oi-sun"></span> ALMOÇO</th>
-                    </tr>
-
-
-                    <!-- On cells (`td` or `th`) -->
-                    <tr class="table-sm">
-                      <td></td>
-                    </tr>
-                    <tr class="table-sm">
-                      <td></td>
-                    </tr>
-                    <tr class="table-sm">
-                      <td></td>
-                    </tr>
-                    <tr class="table-sm">
-                      <td></td>
-                    </tr>
-                    <tr class="table-sm">
-                      <td></td>
-                    </tr>
-                    <tr class="table-sm">
-                      <td></td>
-                    </tr>
-                    <tr class="table-sm">
-                      <td>Minipão/refresco</td>
-                    </tr>
-                    <tr class="table-secondary">
-                      <td>Valor calórico para uma refeição: 900 Kcal</td>
-                    </tr>
-                  </table>
-
-                  <br/>
-
-                  <table class="table table-borderless">
-                    <!-- On rows -->
-                    <tr class="table-active">
-                      <th><span class="oi oi-moon"></span> JANTAR</th>
-                    </tr>
-
-
-                    <!-- On cells (`td` or `th`) -->
-                    <tr class="table-sm">
-                      <td></td>
-                    </tr>
-                    <tr class="table-sm">
-                      <td></td>
-                    </tr>
-                    <tr class="table-sm">
-                      <td></td>
-                    </tr>
-                    <tr class="table-sm">
-                      <td></td>
-                    </tr>
-                    <tr class="table-sm">
-                      <td></td>
-                    </tr>
-                    <tr class="table-sm">
-                      <td></td>
-                    </tr>
-                    <tr class="table-sm">
-                      <td>Minipão/refresco</td>
-                    </tr>
-                    <tr class="table-secondary">
-                      <td>Valor calórico para uma refeição: 1010 Kcal</td>
-                    </tr>
-                  </table>
-
-                  <br/>
-
-                  <table class="table table-borderless">
-                    <!-- On rows -->
-                    <tr class="table-active">
-                      <th>Observação</th>
-                    </tr>
-
-                    <tr class="table-secondary table-sm">
-                      <td>Cardápio sujeito a modificação</td>
-                    </tr>
-                  </table>
-
-                </div>
-                <div class="tab-pane fade" id="nav-qua" role="tabpanel" aria-labelledby="nav-qua-tab">
-                  Cardápio
-                </div>
               </div>
 
 
@@ -365,9 +277,9 @@
           data: {
               // labels: ["11:15", "11:30", "11:45", "12:15", "12:30", "12:45", "13:15", "13:30", "13:45", "14:15"],
               datasets: [{
-                  label: 'Ocupação %',
+                  label: '% Lotação',
                   borderColor: 'rgb(11,130,151)',
-                  backgroundColor: 'rgb(11,130,151)',
+                  backgroundColor: 'rgb(16,148,171)',
                   fill: false,
                   // borderDash: [5, 15],
                   data: [
@@ -439,10 +351,11 @@
                       type: 'linear',
                       scaleLabel: {
                         display: true,
-                        labelString: "% de ocupação"
+                        labelString: "%"
                       },
                       ticks: {
                           beginAtZero:true,
+                          stepSize: 25,
                           suggestedMax: 100
                       },
                       gridLines: {
@@ -450,16 +363,16 @@
                       }
                   }],
                   xAxes: [{
-                    scaleLabel: {
-                      display: true
-                    },
+                    // scaleLabel: {
+                    //   display: true
+                    // },
                     type: 'time',
                     distribution: 'series',
                     time: {
                       unit: "minute",
-                      unitStepSize: 15,
+                      // unitStepSize: 15,
                       displayFormats: {
-                        minute: "h:mm a"
+                        minute: "h:mm"
                       },
                       ticks: {
                           // stepSize: 0.5,
@@ -480,7 +393,7 @@
                   line: {
                       tension: 0, // disables bezier curves
                   },
-                  yAxisID: 'oi'
+                  // yAxisID: 'oi'
               }
           }
       });

@@ -1,0 +1,44 @@
+body {
+  font-size: 0.9em;
+}
+
+div.nav a {
+  padding: 6px;
+}
+
+table.cardapio {
+  font-size: 0.9em;
+}
+
+table.cardapio td {
+  padding: 1px;
+}
+
+table.cardapio tr:first-child td {
+  padding-bottom: 10px;
+}
+
+table.cardapio tr:nth-child(2) td {
+  padding-top: 8px;
+}
+
+/* table.cardapio tr:last-child td{
+  padding-top: 20px;
+    background: #ff0000;
+} */
+
+table.cardapio tr:nth-last-child(2) td {
+  padding-bottom: 10px;
+}
+
+table.cardapio tr.footer td {
+  padding: 6px;
+  font-size: 0.9em;
+  background-color: #f5f5f5;
+}
+
+
+table.cardapio th {
+  padding: 8px;
+  /* margin: 8px; */
+}
