@@ -22,6 +22,15 @@ table.cardapio tr:nth-child(2) td {
   padding-top: 8px;
 }
 
+/* var vazio = #3275bc;
+var moderado = 'rgb(66, 244, 155, '+ opacidade +')';
+var movimentado = 'rgb(232, 247, 19, '+ opacidade +')';
+var lotado = 'rgb(247, 13, 9, '+ opacidade +')'; */
+
+td.vazio i:first-child td{
+  background-color: #3275bc;
+}
+
 /* table.cardapio tr:last-child td{
   padding-top: 20px;
     background: #ff0000;

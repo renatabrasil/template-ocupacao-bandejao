@@ -59,7 +59,7 @@
                     <a href="#">PUSP-C</a>
                 </li>
                 <li>
-                    <a href="fisica.html">Física</a>
+                    <a href="index2.html">Física</a>
                 </li>
                 <li>
                     <a href="#">Químicas</a>
@@ -131,6 +131,15 @@
                     <tr class="footer">
                       <td>Valor calórico para uma refeição: 900 Kcal</td>
                     </tr>
+                    <!-- <tr class="table-sm" style="text-align: right;">
+                      <td style="padding-top: 8px;">
+                        <i class="fas fa-walking fa-2x"></i>
+                        <i class="fas fa-walking fa-2x"></i>
+                        <i class="fas fa-walking fa-2x"></i>
+                        <i class="fas fa-walking fa-2x"></i>&nbsp;&nbsp;&nbsp;
+                        <i class="fas fa-utensils fa-2x"></i>
+                      </td>
+                    </tr> -->
                   </table>
 
                   <div>
@@ -189,6 +198,16 @@
                 </div>
                 <br/>
 
+                <div class="tab-pane fade" id="nav-ter" role="tabpanel" aria-labelledby="nav-ter-tab">
+                  oi
+
+
+                </div>
+
+                <div class="tab-pane fade" id="nav-qua" role="tabpanel" aria-labelledby="nav-qua-tab">
+                                  Cardápio
+                                </div>
+
 
 
 
@@ -204,9 +223,11 @@
     <!-- /#wrapper -->
 
     <!-- Bootstrap core JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="js/cardapios.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/locale/pt-br.js"></script>
@@ -273,7 +294,7 @@
 
       moment.updateLocale('pt-br', null);
 
-      var opacidade = 0.9;
+      var opacidade = 0.4;
 
       var vazio = 'rgb(50, 117, 188, ' + opacidade +')';
       var moderado = 'rgb(66, 244, 155, '+ opacidade +')';
@@ -283,25 +304,26 @@
 
       var ctx = document.getElementById("myChart").getContext('2d');
       var myChart = new Chart(ctx, {
-          type: 'bar',
+          type: 'line',
           data: {
-            label: ['Votes', 'askda'],
+            // label: ['Votes', 'askda'],
               // labels: ["11:15", "11:30", "11:45", "12:15", "12:30", "12:45", "13:15", "13:30", "13:45", "14:15"],
               datasets: [{
-                  // label: 'Vazio',
+                  label: 'Lotação',
 
                   borderColor: 'rgb(11,130,151)',
+                  backgroundColor: 'rgb(11,130,151,0.15)',
                   fill: true,
-                  // borderDash: [10],
+                    borderDash: [5, 10],
                   data: [
 
                     {
                       x: moment("11:15:00", "HH:mm:ss"),
-                      y: 20
+                      y: 25
                     },
                     {
                       x: moment("11:30:00", "HH:mm:ss"),
-                      y: 35
+                      y: 25
                     },
                     {
                       x: moment("11:45:00", "HH:mm:ss"),
@@ -309,74 +331,47 @@
                     },
                     {
                       x: moment("12:00:00", "HH:mm:ss"),
-                      y: 65
+                      y: 75
                     },
                     {
                       x: moment("12:15:00", "HH:mm:ss"),
-                      y: 70
+                      y: 100
                     },
                     {
                       x: moment("12:30:00", "HH:mm:ss"),
-                      y: 85
+                      y: 100
                     },
                     {
                       x: moment("12:45:00", "HH:mm:ss"),
-                      y: 88
+                      y: 100
                     },
                     {
                       x: moment("13:00:00", "HH:mm:ss"),
-                      y: 40
+                      y: 75
                     },
                     {
                       x: moment("13:15:00", "HH:mm:ss"),
-                      y: 20
+                      y: 75
                     },
                     {
                       x: moment("13:30:00", "HH:mm:ss"),
-                      y: 6
+                      y: 25
                     },
                     {
                       x: moment("13:45:00", "HH:mm:ss"),
-                      y: 5
+                      y: 25
                     },
                     {
                       x: moment("14:00:00", "HH:mm:ss"),
-                      y: 2
+                      y: 25
                     },
                     {
                       x: moment("14:15:00", "HH:mm:ss"),
-                      y: 1
+                      y: 25
                     },
 
                   ],
-                  backgroundColor: [
-                    // vazio: 'rgb(50, 117, 188)'
-                    vazio,
-                    // moderado rgb(66, 244, 155),
-                    moderado,
-                    moderado,
-                    // movimentado rgb(232, 247, 19)
-                    movimentado,
-                    movimentado,
 
-                    // cheio rgb(247, 13, 9)
-                    lotado,
-                    lotado,
-                    //
-                    moderado,
-                    vazio,
-                    vazio,
-                    vazio,
-                    vazio,
-                    vazio,
-                    vazio,
-                  ],
-                  label: [
-                    'Vazio',
-                    'Moderado',
-                    'Movimentado',
-                    'Lotado'
-                  ],
                     // 30, 55, 60, 85, 88, 75, 54, 40, 35, 20, 6, 5, 2, 1, 10],
                   borderWidth: 1
               },
@@ -386,8 +381,13 @@
           },
           options: {
             // showAllTooltips: true,
-            tooltips: {
 
+            tooltips: {
+              callbacks: {
+                // title: (items, data) => data.datasets[items[0].datasetIndex].data[items[0].index].x,
+                title: (items, data) => '',
+                label: (item, data) => data.datasets[item.datasetIndex].data[item.index].y + '%'
+              }
             },
               scales: {
                   yAxes: [{
@@ -434,7 +434,7 @@
               },
               elements: {
                   line: {
-                      tension: 0, // disables bezier curves
+                      // tension: 0, // disables bezier curves
                   },
                   // yAxisID: 'oi'
               }
